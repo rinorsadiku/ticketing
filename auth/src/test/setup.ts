@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 import request from 'supertest';
 import { app } from '../app'
 
-jest.setTimeout(30000);
 
 declare global {
     namespace NodeJS {
@@ -12,6 +11,8 @@ declare global {
         }
     }
 }
+
+jest.setTimeout(30000);
 
 let mongo: any;
 beforeAll(async () => {
