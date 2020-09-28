@@ -11,6 +11,8 @@ declare global {
 }
 
 jest.mock('../nats-wrapper.ts')
+jest.setTimeout(30000);
+
 process.env.STRIPE_KEY = 'sk_test_51HS0D6IBWGbpg68tzbXao1EP2oup3qWJ3RgDCpSjMD3vz7JBUDke5lafjRo8M1q7JKSj2HDZOEwx7FZFe3EVSB8000HehhXnxe'
 
 let mongo: any;
@@ -28,9 +30,10 @@ beforeAll(async () => {
 
 beforeEach(async () => {
     jest.clearAllMocks();
-    const collections = await mongoose.connection.db.collections();
+    const collections = await mongoose.connection.collections;
 
-    for (let collection of collections) {
+    for (const key in collections) {
+        const collection = collections[key];
         await collection.deleteMany({});
     }
 });

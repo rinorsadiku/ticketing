@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node-dev src/index.ts",
-    "test": "jest --watchAll --no-cache"
+    "test": "jest --watchAll --no-cache",
+    "test:ci": "jest"
   },
   "jest": {
     "preset": "ts-jest",
@@ -37,7 +38,7 @@
     "@types/jest": "^25.2.3",
     "@types/supertest": "^2.0.9",
     "jest": "^26.0.1",
-    "mongodb-memory-server": "^6.6.1",
+    "mongodb-memory-server": "^6.5.1",
     "supertest": "^4.0.2",
     "ts-jest": "^26.1.0"
   }
