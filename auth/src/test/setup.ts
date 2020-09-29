@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import request from 'supertest';
 import { app } from '../app'
 
+
 declare global {
     namespace NodeJS {
         interface Global {
@@ -10,6 +11,8 @@ declare global {
         }
     }
 }
+
+jest.setTimeout(30000);
 
 let mongo: any;
 beforeAll(async () => {
@@ -25,9 +28,11 @@ beforeAll(async () => {
 });
 
 beforeEach(async () => {
-    const collections = await mongoose.connection.db.collections();
+    jest.clearAllMocks();
+    const collections = await mongoose.connection.collections;
 
-    for (let collection of collections) {
+    for (const key in collections) {
+        const collection = collections[key];
         await collection.deleteMany({});
     }
 });
