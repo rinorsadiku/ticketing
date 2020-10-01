@@ -16,6 +16,9 @@ spec:
         - name: client
           # image: us.gcr.io/ticketing-dev-278420/client
           image: rinorsadiku/client
+          env:
+            - name: BASE_URL
+              value: "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local"
 ---
 apiVersion: v1
 kind: Service

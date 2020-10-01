@@ -16,6 +16,9 @@ spec:
         - name: client
           # image: us.gcr.io/ticketing-dev-278420/client
           image: rinorsadiku/client-prod
+          env:
+            - name: BASE_URL
+              value: "http://prod-app-ticketing.xyz"
 ---
 apiVersion: v1
 kind: Service
