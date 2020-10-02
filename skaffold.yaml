@@ -36,10 +36,10 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: rinorsadiku/orders
+    - image: rinorsadiku/orders-dev
       context: orders
       docker:
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: "src/**/*.ts"
