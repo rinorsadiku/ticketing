@@ -15,7 +15,7 @@ spec:
       containers:
         - name: client
           # image: us.gcr.io/ticketing-dev-278420/client
-          image: rinorsadiku/client
+          image: rinorsadiku/client-dev
           env:
             - name: BASE_URL
               value: "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local"

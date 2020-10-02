@@ -20,10 +20,10 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
-    - image: rinorsadiku/client
+    - image: rinorsadiku/client-dev
       context: client
       docker:
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.dev
       sync:
         manual:
           - src: "**/*.js"
