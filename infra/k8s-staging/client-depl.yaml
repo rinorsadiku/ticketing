@@ -18,7 +18,7 @@ spec:
           image: rinorsadiku/client
           env:
             - name: BASE_URL
-              value: "http://prod-app-ticketing.xyz"
+              value: "http://staging-app-ticketing.xyz"
 ---
 apiVersion: v1
 kind: Service
