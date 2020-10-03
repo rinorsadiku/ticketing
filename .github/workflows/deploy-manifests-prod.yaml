@@ -1,11 +1,11 @@
-name: deploy-manifests
+name: deploy-manifests-prod
 
 on:
   push:
     branches:
       - master
     paths:
-      - 'infra/**'
+      - "infra/**"
 
 jobs:
   build:

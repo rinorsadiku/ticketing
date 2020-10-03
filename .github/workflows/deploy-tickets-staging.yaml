@@ -1,4 +1,4 @@
-name: deploy-tickets
+name: deploy-tickets-staging
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: deploy-payments
+name: deploy-payments-prod
 
 on:
   push:
