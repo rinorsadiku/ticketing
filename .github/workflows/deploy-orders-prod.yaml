@@ -1,4 +1,4 @@
-name: deploy-orders
+name: deploy-orders-prod
 
 on:
   push:

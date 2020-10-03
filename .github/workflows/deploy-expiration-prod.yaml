@@ -1,4 +1,4 @@
-name: deploy-expiration
+name: deploy-expiration-prod
 
 on:
   push:

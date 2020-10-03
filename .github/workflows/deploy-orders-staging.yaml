@@ -1,4 +1,4 @@
-name: deploy-orders
+name: deploy-orders-staging
 
 on:
   push:
